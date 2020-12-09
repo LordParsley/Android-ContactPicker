@@ -30,6 +30,9 @@ public enum ContactPictureType {
         catch (IllegalArgumentException ignore) {
             Log.e(ContactPictureType.class.getSimpleName(), ignore.getMessage());
             return ROUND;
+        }catch (NullPointerException ignore) {
+            Log.e(ContactPictureType.class.getSimpleName(), ignore.getMessage());
+            return ROUND;
         }
     }
 
